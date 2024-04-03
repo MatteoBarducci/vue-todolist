@@ -1,0 +1,44 @@
+body{
+    font-family: cabin;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.user-inputs{
+    display: flex;
+    gap: 10px;
+}
+
+.user-inputs > *{
+    background-color: white;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tasks{
+    background-color: rgba(156, 156, 156, 0.622);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(157, 157, 157);
+}

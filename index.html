@@ -15,7 +15,23 @@
     <title>To do list</title>
 </head>
 <body>
-    <ul></ul>
+    <div id="app">
+        <div class="container">
+
+            <h1>To do List</h1>
+            <div class="user-inputs">
+                <input type="text" placeholder="New task" v-model="newTaskText" @keyup.enter="addNewTask">
+                <button @click="addNewTask">Add</button>
+            </div>
+    
+            <div class="tasks">
+                <div class="task" v-for="todo, index in toDoList">
+                    <span :class="{'done': todo.done}">{{ todo.text }}</span>
+                    <span @click="deletetask"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script type="text/javascript" src="js/script.js"></script>

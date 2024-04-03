@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            todolist: [
+            toDoList: [
                 {
                     text: 'Wash the dishes',
                     done: true
@@ -11,10 +11,6 @@ createApp({
                 {
                     text: 'Sweep the floor',
                     done: false
-                },
-                {
-                    name: 'Take out the trash',
-                    done: true
                 },
                 {
                     text: 'Water the plants',
@@ -28,9 +24,24 @@ createApp({
                     text: 'Make the bed',
                     done: true
                 },
-            ]
+                {
+                    text: 'Take out the trash',
+                    done: true
+                },
+            ],
+            newTaskText: '',
         };
     },
     methods: {
+        deletetask(index) {
+            this.toDoList.splice(index, 1)
+        },
+        addNewTask(){
+            const newTask = {
+                text: this.newTaskText,
+                done: false
+            }
+            this.toDoList.push(newTask)
+        }
     }
 }).mount('#app');
